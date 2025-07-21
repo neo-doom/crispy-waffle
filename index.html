@@ -1,10 +1,299 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ezincident - Streamlined Incident Management</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #3498db;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #3498db;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #e74c3c;
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        
+        .cta-button:hover {
+            background: #c0392b;
+        }
+        
+        .features {
+            padding: 4rem 0;
+            background: #f8f9fa;
+        }
+        
+        .features h2 {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+            color: #2c3e50;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        .feature-card h3 {
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+        
+        .about {
+            padding: 4rem 0;
+        }
+        
+        .about h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+            color: #2c3e50;
+        }
+        
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: #3498db;
+        }
+        
+        .footer-section a {
+            color: #bdc3c7;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-section a:hover {
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to My Website</h1>
-    <p>Coming soon!</p>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">ezincident</div>
+                <nav>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#login">Login</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>ezincident</h1>
+            <p>Streamlined incident management for modern teams</p>
+            <p>Respond faster, resolve efficiently, and learn continuously with our powerful incident management platform.</p>
+            <a href="#contact" class="cta-button">Get Started</a>
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <div class="container">
+            <h2>Key Features</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <span class="feature-icon">🚨</span>
+                    <h3>Rapid Alert System</h3>
+                    <p>Instantly notify the right people when incidents occur. Automated escalation ensures no critical issue goes unnoticed.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">📊</span>
+                    <h3>Real-time Dashboard</h3>
+                    <p>Monitor all incidents from a centralized dashboard. Track status, assign teams, and get insights at a glance.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🔄</span>
+                    <h3>Automated Workflows</h3>
+                    <p>Streamline your incident response with customizable workflows and automated task assignments.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">📝</span>
+                    <h3>Detailed Reporting</h3>
+                    <p>Generate comprehensive post-incident reports and analytics to improve your response processes.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🔗</span>
+                    <h3>Integration Ready</h3>
+                    <p>Seamlessly integrate with your existing tools and services through our robust API and webhooks.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">👥</span>
+                    <h3>Team Collaboration</h3>
+                    <p>Built-in communication tools keep your team coordinated during incident resolution.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="container">
+            <h2>About ezincident</h2>
+            <div class="about-content">
+                <p>ezincident is designed for teams who need reliable, efficient incident management without the complexity. Whether you're managing IT infrastructure, customer service issues, or operational incidents, our platform provides the tools you need to respond quickly and effectively.</p>
+                <p>Built by incident responders for incident responders, ezincident focuses on simplicity and effectiveness. We believe that during critical moments, your tools should help, not hinder your response efforts.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <a href="mailto:support@ezincident.com">support@ezincident.com</a>
+                    <a href="tel:+1-555-0123">+1 (555) 012-3456</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <a href="#">Documentation</a>
+                    <a href="#">API Reference</a>
+                    <a href="#">Help Center</a>
+                    <a href="#">Status Page</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Security</a>
+                    <a href="#">Careers</a>
+                </div>
+            </div>
+            <p>&copy; 2025 ezincident. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
