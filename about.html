@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Features - ezincident</title>
+    <title>About - ezincident</title>
     <style>
         * {
             margin: 0;
@@ -71,90 +71,143 @@
             margin-bottom: 1rem;
         }
         
-        .hero p {
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
-        
-        .features-section {
+        .content-section {
             padding: 4rem 0;
         }
         
-        .feature-category {
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
             margin-bottom: 4rem;
         }
         
-        .feature-category h2 {
-            font-size: 2rem;
+        .content-text h2 {
             color: #2c3e50;
-            margin-bottom: 2rem;
-            text-align: center;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
         }
         
-        .feature-grid {
+        .content-text p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+        
+        .stats-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 2rem;
-            margin-bottom: 3rem;
+            margin: 3rem 0;
         }
         
-        .feature-detail {
+        .stat-item {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #3498db;
+            display: block;
+        }
+        
+        .stat-label {
+            color: #7f8c8d;
+            margin-top: 0.5rem;
+        }
+        
+        .values-section {
+            background: #f8f9fa;
+            padding: 4rem 0;
+        }
+        
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .value-item {
             background: white;
             padding: 2rem;
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            border-left: 4px solid #3498db;
+            text-align: center;
         }
         
-        .feature-detail h3 {
+        .value-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        .value-item h3 {
             color: #2c3e50;
             margin-bottom: 1rem;
-            font-size: 1.3rem;
         }
         
-        .feature-detail ul {
-            list-style: none;
-            margin: 1rem 0;
-        }
-        
-        .feature-detail li {
-            padding: 0.3rem 0;
-            position: relative;
-            padding-left: 1.5rem;
-        }
-        
-        .feature-detail li:before {
-            content: "✓";
-            color: #27ae60;
-            font-weight: bold;
-            position: absolute;
-            left: 0;
-        }
-        
-        .integration-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-        
-        .integration-item {
-            background: #f8f9fa;
-            padding: 1rem;
-            border-radius: 8px;
+        .team-section {
+            padding: 4rem 0;
             text-align: center;
-            border: 2px solid #e9ecef;
         }
         
-        .pricing-preview {
-            background: #f8f9fa;
+        .team-section h2 {
+            color: #2c3e50;
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .team-member {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .member-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: #3498db;
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        
+        .member-name {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+        
+        .member-role {
+            color: #7f8c8d;
+            font-style: italic;
+        }
+        
+        .contact-cta {
+            background: #2c3e50;
+            color: white;
             padding: 3rem 0;
             text-align: center;
-        }
-        
-        .pricing-preview h2 {
-            color: #2c3e50;
-            margin-bottom: 1rem;
         }
         
         .cta-button {
@@ -191,6 +244,11 @@
                 justify-content: center;
             }
             
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
             .hero h1 {
                 font-size: 2rem;
             }
@@ -205,8 +263,8 @@
                 <nav>
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="features.html" class="active">Features</a></li>
-                        <li><a href="about.html">About</a></li>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="about.html" class="active">About</a></li>
                         <li><a href="contact.html">Contact</a></li>
                         <li><a href="status.html">Status</a></li>
                         <li><a href="#login">Login</a></li>
@@ -218,181 +276,124 @@
 
     <section class="hero">
         <div class="container">
-            <h1>Powerful Features for Modern Incident Management</h1>
-            <p>Everything you need to detect, respond, and resolve incidents efficiently</p>
+            <h1>About ezincident</h1>
+            <p>Built by incident responders, for incident responders</p>
         </div>
     </section>
 
-    <section class="features-section">
+    <section class="content-section">
         <div class="container">
-            
-            <div class="feature-category">
-                <h2>Incident Detection & Alerting</h2>
-                <div class="feature-grid">
-                    <div class="feature-detail">
-                        <h3>Multi-Channel Alerting</h3>
-                        <p>Never miss a critical incident with our comprehensive alerting system.</p>
-                        <ul>
-                            <li>Email notifications with customizable templates</li>
-                            <li>SMS alerts for urgent incidents</li>
-                            <li>Slack, Teams, and Discord integrations</li>
-                            <li>Push notifications via mobile app</li>
-                            <li>Voice call escalation for critical alerts</li>
-                        </ul>
-                    </div>
-                    <div class="feature-detail">
-                        <h3>Smart Alert Routing</h3>
-                        <p>Intelligent alert distribution based on severity, time, and team availability.</p>
-                        <ul>
-                            <li>Role-based routing and escalation</li>
-                            <li>Time-based on-call scheduling</li>
-                            <li>Alert suppression and grouping</li>
-                            <li>Auto-escalation with customizable timers</li>
-                            <li>Holiday and vacation awareness</li>
-                        </ul>
-                    </div>
+            <div class="content-grid">
+                <div class="content-text">
+                    <h2>Our Story</h2>
+                    <p>ezincident was born from real-world experience managing critical incidents in high-pressure environments. Our founders spent years responding to outages, coordinating teams, and learning from failures at scale.</p>
+                    <p>We noticed that existing tools were either too complex for quick response or too simple for comprehensive incident management. That's when we decided to build something different.</p>
+                    <p>Our mission is simple: provide teams with the tools they need to respond quickly, resolve efficiently, and learn continuously from every incident.</p>
+                </div>
+                <div class="content-text">
+                    <h2>Why We're Different</h2>
+                    <p>Unlike other incident management platforms, ezincident focuses on simplicity without sacrificing power. Every feature is designed with the stress and urgency of real incidents in mind.</p>
+                    <p>We believe that during critical moments, your tools should help, not hinder. That's why our interface is clean, our workflows are intuitive, and our alerts are intelligent.</p>
+                    <p>We're not just building software – we're solving problems we've personally experienced in production environments.</p>
                 </div>
             </div>
 
-            <div class="feature-category">
-                <h2>Incident Response & Management</h2>
-                <div class="feature-grid">
-                    <div class="feature-detail">
-                        <h3>Centralized Dashboard</h3>
-                        <p>Get a complete view of all incidents across your organization.</p>
-                        <ul>
-                            <li>Real-time incident status tracking</li>
-                            <li>Priority and severity filtering</li>
-                            <li>Team assignment and workload view</li>
-                            <li>Historical incident timeline</li>
-                            <li>Custom dashboard widgets</li>
-                        </ul>
-                    </div>
-                    <div class="feature-detail">
-                        <h3>Automated Workflows</h3>
-                        <p>Streamline your response process with customizable automation.</p>
-                        <ul>
-                            <li>Incident template creation</li>
-                            <li>Auto-assignment based on criteria</li>
-                            <li>Status change triggers</li>
-                            <li>Integration with ticketing systems</li>
-                            <li>Custom field automation</li>
-                        </ul>
-                    </div>
-                    <div class="feature-detail">
-                        <h3>Collaboration Tools</h3>
-                        <p>Keep your team coordinated during incident resolution.</p>
-                        <ul>
-                            <li>Built-in chat and comments</li>
-                            <li>File attachments and screenshots</li>
-                            <li>@mentions and notifications</li>
-                            <li>Video conferencing integration</li>
-                            <li>Status page communication</li>
-                        </ul>
-                    </div>
-                    <div class="feature-detail">
-                        <h3>Knowledge Base Integration</h3>
-                        <p>Access relevant information quickly during incident response.</p>
-                        <ul>
-                            <li>Searchable runbook library</li>
-                            <li>Auto-suggested solutions</li>
-                            <li>Step-by-step resolution guides</li>
-                            <li>Historical incident references</li>
-                            <li>External documentation links</li>
-                        </ul>
-                    </div>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">99.9%</span>
+                    <div class="stat-label">Uptime SLA</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">< 30s</span>
+                    <div class="stat-label">Alert Delivery</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">24/7</span>
+                    <div class="stat-label">Support Available</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">500+</span>
+                    <div class="stat-label">Teams Trust Us</div>
                 </div>
             </div>
-
-            <div class="feature-category">
-                <h2>Analytics & Reporting</h2>
-                <div class="feature-grid">
-                    <div class="feature-detail">
-                        <h3>Advanced Analytics</h3>
-                        <p>Gain insights into your incident patterns and team performance.</p>
-                        <ul>
-                            <li>MTTR and MTBF metrics</li>
-                            <li>Incident trend analysis</li>
-                            <li>Team performance dashboards</li>
-                            <li>SLA compliance tracking</li>
-                            <li>Custom reporting queries</li>
-                        </ul>
-                    </div>
-                    <div class="feature-detail">
-                        <h3>Post-Incident Analysis</h3>
-                        <p>Learn from every incident to improve your processes.</p>
-                        <ul>
-                            <li>Automated report generation</li>
-                            <li>Timeline reconstruction</li>
-                            <li>Root cause analysis templates</li>
-                            <li>Action item tracking</li>
-                            <li>Lessons learned database</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="feature-category">
-                <h2>Integrations & API</h2>
-                <div class="feature-grid">
-                    <div class="feature-detail">
-                        <h3>Monitoring Tools</h3>
-                        <p>Connect with your existing monitoring and observability stack.</p>
-                        <div class="integration-grid">
-                            <div class="integration-item">Datadog</div>
-                            <div class="integration-item">New Relic</div>
-                            <div class="integration-item">Prometheus</div>
-                            <div class="integration-item">Grafana</div>
-                            <div class="integration-item">Splunk</div>
-                            <div class="integration-item">Nagios</div>
-                        </div>
-                    </div>
-                    <div class="feature-detail">
-                        <h3>Communication Platforms</h3>
-                        <p>Integrate with your team's preferred communication tools.</p>
-                        <div class="integration-grid">
-                            <div class="integration-item">Slack</div>
-                            <div class="integration-item">Microsoft Teams</div>
-                            <div class="integration-item">Discord</div>
-                            <div class="integration-item">Zoom</div>
-                            <div class="integration-item">WebEx</div>
-                            <div class="integration-item">Google Meet</div>
-                        </div>
-                    </div>
-                    <div class="feature-detail">
-                        <h3>Ticketing Systems</h3>
-                        <p>Seamlessly work with your existing ticketing workflows.</p>
-                        <div class="integration-grid">
-                            <div class="integration-item">Jira</div>
-                            <div class="integration-item">ServiceNow</div>
-                            <div class="integration-item">Zendesk</div>
-                            <div class="integration-item">GitHub Issues</div>
-                            <div class="integration-item">Linear</div>
-                            <div class="integration-item">Asana</div>
-                        </div>
-                    </div>
-                    <div class="feature-detail">
-                        <h3>RESTful API</h3>
-                        <p>Build custom integrations with our comprehensive API.</p>
-                        <ul>
-                            <li>Full CRUD operations</li>
-                            <li>Webhook support</li>
-                            <li>Rate limiting and authentication</li>
-                            <li>Comprehensive documentation</li>
-                            <li>SDKs for popular languages</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </section>
 
-    <section class="pricing-preview">
+    <section class="values-section">
         <div class="container">
-            <h2>Ready to streamline your incident management?</h2>
-            <p>Start with our free tier and scale as your team grows</p>
-            <a href="contact.html" class="cta-button">Get Started Today</a>
+            <h2 style="text-align: center; margin-bottom: 3rem; color: #2c3e50; font-size: 2.5rem;">Our Values</h2>
+            <div class="values-grid">
+                <div class="value-item">
+                    <span class="value-icon">🚀</span>
+                    <h3>Speed First</h3>
+                    <p>Every second counts during an incident. We optimize for rapid response and quick resolution, ensuring your team can act fast when it matters most.</p>
+                </div>
+                <div class="value-item">
+                    <span class="value-icon">🎯</span>
+                    <h3>Reliability</h3>
+                    <p>Your incident management tool should never be the cause of an incident. We maintain enterprise-grade reliability with robust infrastructure and monitoring.</p>
+                </div>
+                <div class="value-item">
+                    <span class="value-icon">🤝</span>
+                    <h3>Collaboration</h3>
+                    <p>Incidents are rarely solved by one person. We build tools that bring teams together and keep everyone informed throughout the resolution process.</p>
+                </div>
+                <div class="value-item">
+                    <span class="value-icon">📊</span>
+                    <h3>Continuous Learning</h3>
+                    <p>Every incident is an opportunity to improve. We provide the analytics and insights needed to learn from each event and strengthen your systems.</p>
+                </div>
+                <div class="value-item">
+                    <span class="value-icon">🔒</span>
+                    <h3>Security</h3>
+                    <p>We understand the sensitive nature of incident data. Enterprise-grade security, encryption, and compliance are built into every aspect of our platform.</p>
+                </div>
+                <div class="value-item">
+                    <span class="value-icon">💡</span>
+                    <h3>Simplicity</h3>
+                    <p>Complex tools create confusion during critical moments. We believe in powerful functionality delivered through intuitive, easy-to-use interfaces.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="team-section">
+        <div class="container">
+            <h2>Meet Our Team</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-avatar">JS</div>
+                    <div class="member-name">Jordan Smith</div>
+                    <div class="member-role">CEO & Co-Founder</div>
+                    <p style="margin-top: 1rem; color: #7f8c8d;">Former SRE at major tech companies. 10+ years in incident response and infrastructure reliability.</p>
+                </div>
+                <div class="team-member">
+                    <div class="member-avatar">AL</div>
+                    <div class="member-name">Alex Lee</div>
+                    <div class="member-role">CTO & Co-Founder</div>
+                    <p style="margin-top: 1rem; color: #7f8c8d;">Lead engineer with expertise in distributed systems and real-time communication platforms.</p>
+                </div>
+                <div class="team-member">
+                    <div class="member-avatar">SM</div>
+                    <div class="member-name">Sarah Martinez</div>
+                    <div class="member-role">Head of Product</div>
+                    <p style="margin-top: 1rem; color: #7f8c8d;">Product leader focused on user experience and workflow optimization for technical teams.</p>
+                </div>
+                <div class="team-member">
+                    <div class="member-avatar">DW</div>
+                    <div class="member-name">David Wong</div>
+                    <div class="member-role">VP of Engineering</div>
+                    <p style="margin-top: 1rem; color: #7f8c8d;">Engineering leader with deep experience in building scalable, reliable software platforms.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-cta">
+        <div class="container">
+            <h2>Want to learn more?</h2>
+            <p>We'd love to hear about your incident management challenges and show you how ezincident can help.</p>
+            <a href="contact.html" class="cta-button">Get in Touch</a>
         </div>
     </section>
 
