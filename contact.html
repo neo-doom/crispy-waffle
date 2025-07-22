@@ -3,123 +3,93 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact Us – ezincident</title>
+  <title>Contact Us – ezIncident</title>
   <link rel="stylesheet" href="styles.css" />
   <style>
     body {
-      margin: 0;
+      background-color: #0b1120;
+      color: #f8fafc;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #0d1117;
-      color: #e6edf3;
+      margin: 0;
+      padding: 0;
     }
     header {
-      background-color: #010409;
-      padding: 20px 0;
+      background-color: #0f172a;
+      padding: 1rem 2rem;
       text-align: center;
-      border-bottom: 1px solid #30363d;
     }
     header h1 {
+      color: #38bdf8;
       margin: 0;
-      font-size: 28px;
-      color: #58a6ff;
     }
-    nav a {
-      color: #c9d1d9;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: 500;
+    main {
+      max-width: 700px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background-color: #1e293b;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     }
-    nav a:hover {
-      color: #58a6ff;
+    form label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+      color: #e2e8f0;
     }
-
-    .contact-section {
-      max-width: 600px;
-      margin: 60px auto;
-      background-color: #161b22;
-      padding: 40px;
-      border-radius: 10px;
-      box-shadow: 0 0 12px rgba(0,0,0,0.5);
-    }
-
-    .contact-section h2 {
-      color: #58a6ff;
-      margin-bottom: 20px;
-      font-size: 24px;
-    }
-
-    .contact-section p {
-      margin-bottom: 30px;
-      color: #8b949e;
-    }
-
-    .contact-section input,
-    .contact-section textarea {
+    form input,
+    form textarea {
       width: 100%;
-      background-color: #0d1117;
-      color: #e6edf3;
-      border: 1px solid #30363d;
-      border-radius: 6px;
-      padding: 12px;
-      margin-bottom: 20px;
-      font-size: 15px;
-    }
-
-    .contact-section input::placeholder,
-    .contact-section textarea::placeholder {
-      color: #8b949e;
-    }
-
-    .contact-section button {
-      background-color: #238636;
+      padding: 0.8rem;
+      margin-bottom: 1.2rem;
       border: none;
-      color: white;
-      padding: 12px 24px;
-      font-size: 16px;
-      border-radius: 6px;
+      border-radius: 8px;
+      background-color: #334155;
+      color: #f8fafc;
+    }
+    form button {
+      background-color: #38bdf8;
+      color: #0f172a;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
       cursor: pointer;
       transition: background-color 0.3s ease;
     }
-
-    .contact-section button:hover {
-      background-color: #2ea043;
+    form button:hover {
+      background-color: #0ea5e9;
     }
-
     footer {
       text-align: center;
-      padding: 20px;
-      font-size: 14px;
-      background-color: #010409;
-      color: #8b949e;
-      border-top: 1px solid #30363d;
+      padding: 1rem;
+      background-color: #0f172a;
+      color: #94a3b8;
+      margin-top: 3rem;
     }
   </style>
 </head>
 <body>
+  <header>
+    <h1>Contact ezIncident</h1>
+  </header>
 
-<header>
-  <h1>ezincident</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+  <main>
+    <form action="mailto:contact@ezincident.com" method="POST" enctype="text/plain">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" required />
 
-<section class="contact-section">
-  <h2>Contact Us</h2>
-  <p>Have questions, ideas, or want to collaborate? Drop us a message – we’d love to connect!</p>
+      <label for="email">Your Email</label>
+      <input type="email" id="email" name="email" required />
 
-  <form action="mailto:contact@ezincident.com" method="POST" enctype="text/plain">
-    <input type="text" name="name" placeholder="Your Name" required />
-    <input type="email" name="email" placeholder="Your Email" required />
-    <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
-    <button type="submit">Send Message</button>
-  </form>
-</section>
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="6" required></textarea>
 
-<footer>
-  &copy; 2025 ezincident. All rights reserved.
-</footer>
+      <button type="submit">Send Message</button>
+    </form>
+  </main>
 
+  <footer>
+    &copy; 2025 ezIncident. All rights reserved.
+  </footer>
 </body>
 </html>
