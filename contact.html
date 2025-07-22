@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us – ezincident</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0d1117;
+      color: #e6edf3;
+    }
+    header {
+      background-color: #010409;
+      padding: 20px 0;
+      text-align: center;
+      border-bottom: 1px solid #30363d;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+      color: #58a6ff;
+    }
+    nav a {
+      color: #c9d1d9;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    nav a:hover {
+      color: #58a6ff;
+    }
+
+    .contact-section {
+      max-width: 600px;
+      margin: 60px auto;
+      background-color: #161b22;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.5);
+    }
+
+    .contact-section h2 {
+      color: #58a6ff;
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+
+    .contact-section p {
+      margin-bottom: 30px;
+      color: #8b949e;
+    }
+
+    .contact-section input,
+    .contact-section textarea {
+      width: 100%;
+      background-color: #0d1117;
+      color: #e6edf3;
+      border: 1px solid #30363d;
+      border-radius: 6px;
+      padding: 12px;
+      margin-bottom: 20px;
+      font-size: 15px;
+    }
+
+    .contact-section input::placeholder,
+    .contact-section textarea::placeholder {
+      color: #8b949e;
+    }
+
+    .contact-section button {
+      background-color: #238636;
+      border: none;
+      color: white;
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .contact-section button:hover {
+      background-color: #2ea043;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      background-color: #010409;
+      color: #8b949e;
+      border-top: 1px solid #30363d;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>ezincident</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<section class="contact-section">
+  <h2>Contact Us</h2>
+  <p>Have questions, ideas, or want to collaborate? Drop us a message – we’d love to connect!</p>
+
+  <form action="mailto:founders@ezincident.com" method="POST" enctype="text/plain">
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<footer>
+  &copy; 2025 ezincident. All rights reserved.
+</footer>
+
+</body>
+</html>
