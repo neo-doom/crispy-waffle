@@ -3,112 +3,142 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Schedule a Demo – ezIncident</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Schedule a Demo - ezincident</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
       margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background-color: #f4f6f8;
     }
 
     header {
-      background-color: #00c1a4;
-      color: white;
-      padding: 20px;
+      background-color: #2c3e50;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      color: #3498db;
+      margin: 0;
+      font-size: 1.8rem;
+    }
+
+    nav a {
+      color: #fff;
+      margin-left: 2rem;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: #3498db;
+    }
+
+    .demo-section {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      padding: 60px 20px;
+      color: #fff;
       text-align: center;
     }
 
-    h1 {
+    .demo-section h2 {
       font-size: 2.5rem;
-      margin-bottom: 10px;
+      margin-bottom: 0.5rem;
     }
 
-    p.subheading {
-      font-size: 1.2rem;
-      color: #e3f9f6;
+    .demo-section p {
+      font-size: 1.1rem;
     }
 
-    .container {
+    .form-container {
+      background: #fff;
       max-width: 600px;
       margin: 40px auto;
-      background: white;
       padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     }
 
-    label {
+    .form-container label {
       display: block;
-      margin-top: 15px;
+      font-weight: 600;
+      margin: 15px 0 5px;
+    }
+
+    .form-container input,
+    .form-container textarea {
+      width: 100%;
+      padding: 10px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 15px;
+    }
+
+    .form-container button {
+      background-color: #3498db;
+      color: #fff;
+      padding: 12px 20px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
       font-weight: bold;
     }
 
-    input, textarea, select {
-      width: 100%;
-      padding: 12px;
-      margin-top: 5px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 1rem;
-    }
-
-    button {
-      margin-top: 20px;
-      background-color: #00c1a4;
-      color: white;
-      padding: 14px 28px;
-      font-size: 1.1rem;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    button:hover {
-      background-color: #009e88;
+    .form-container button:hover {
+      background-color: #2980b9;
     }
 
     footer {
       text-align: center;
       padding: 20px;
-      background: #f0f0f0;
-      font-size: 0.9rem;
-      color: #777;
+      background-color: #2c3e50;
+      color: white;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Schedule a Demo</h1>
-    <p class="subheading">Discover how ezIncident can streamline your incident response</p>
+    <h1>ezincident</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="features.html">Features</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </header>
 
-  <div class="container">
-    <form action="mailto:demo@ezincident.com" method="post" enctype="text/plain">
-      <label for="name">Full Name</label>
-      <input type="text" id="name" name="name" required>
+  <section class="demo-section">
+    <h2>Schedule a Demo</h2>
+    <p>Experience how ezincident can streamline your incident response workflow.</p>
+  </section>
 
-      <label for="email">Work Email</label>
-      <input type="email" id="email" name="email" required>
+  <div class="form-container">
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Your Email</label>
+      <input type="email" id="email" name="_replyto" required />
 
       <label for="company">Company Name</label>
-      <input type="text" id="company" name="company" required>
-
-      <label for="role">Your Role</label>
-      <input type="text" id="role" name="role">
+      <input type="text" id="company" name="company" required />
 
       <label for="message">Any Specific Requirements?</label>
-      <textarea id="message" name="message" rows="4"></textarea>
+      <textarea id="message" name="message" rows="6"></textarea>
 
-      <button type="submit">Request Demo</button>
+      <button type="submit">Book Demo</button>
     </form>
   </div>
 
   <footer>
-    &copy; 2025 ezIncident. All rights reserved.
+    &copy; 2025 ezincident. All rights reserved.
   </footer>
 
 </body>
