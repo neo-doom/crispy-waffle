@@ -4,101 +4,110 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Schedule a Demo - ezincident</title>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <style>
     body {
       margin: 0;
-      font-family: 'Open Sans', sans-serif;
-      background-color: #f4f6f8;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f5f7fa;
     }
 
+    /* Header */
     header {
       background-color: #2c3e50;
-      padding: 1rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding: 1rem 2rem;
     }
 
     header h1 {
       color: #3498db;
       margin: 0;
       font-size: 1.8rem;
+      font-weight: 600;
     }
 
     nav a {
       color: #fff;
-      margin-left: 2rem;
       text-decoration: none;
-      font-weight: 600;
+      margin-left: 2rem;
+      font-size: 1rem;
+      font-weight: 500;
     }
 
     nav a:hover {
       color: #3498db;
     }
 
-    .demo-section {
+    /* Hero Section */
+    .hero {
       background: linear-gradient(135deg, #667eea, #764ba2);
-      padding: 60px 20px;
       color: #fff;
       text-align: center;
+      padding: 80px 20px 60px;
     }
 
-    .demo-section h2 {
-      font-size: 2.5rem;
+    .hero h2 {
+      font-size: 2.8rem;
       margin-bottom: 0.5rem;
     }
 
-    .demo-section p {
-      font-size: 1.1rem;
-    }
-
-    .form-container {
-      background: #fff;
+    .hero p {
+      font-size: 1.2rem;
+      margin: 0 auto;
       max-width: 600px;
-      margin: 40px auto;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     }
 
-    .form-container label {
+    /* Form Section */
+    .form-wrapper {
+      background-color: #fff;
+      max-width: 600px;
+      margin: -40px auto 60px;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+    }
+
+    .form-wrapper label {
       display: block;
-      font-weight: 600;
-      margin: 15px 0 5px;
+      margin: 16px 0 6px;
+      font-weight: 500;
     }
 
-    .form-container input,
-    .form-container textarea {
+    .form-wrapper input,
+    .form-wrapper textarea {
       width: 100%;
-      padding: 10px;
-      font-size: 1rem;
+      padding: 12px;
+      border-radius: 8px;
       border: 1px solid #ccc;
-      border-radius: 5px;
-      margin-bottom: 15px;
-    }
-
-    .form-container button {
-      background-color: #3498db;
-      color: #fff;
-      padding: 12px 20px;
       font-size: 1rem;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-weight: bold;
+      box-sizing: border-box;
     }
 
-    .form-container button:hover {
+    .form-wrapper button {
+      background-color: #3498db;
+      color: white;
+      border: none;
+      padding: 14px 24px;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 20px;
+      font-weight: 600;
+    }
+
+    .form-wrapper button:hover {
       background-color: #2980b9;
     }
 
+    /* Footer */
     footer {
       text-align: center;
       padding: 20px;
       background-color: #2c3e50;
       color: white;
-      margin-top: 40px;
+      font-size: 0.95rem;
     }
   </style>
 </head>
@@ -114,24 +123,24 @@
     </nav>
   </header>
 
-  <section class="demo-section">
+  <section class="hero">
     <h2>Schedule a Demo</h2>
-    <p>Experience how ezincident can streamline your incident response workflow.</p>
+    <p>See how ezincident can transform your incident response experience in minutes.</p>
   </section>
 
-  <div class="form-container">
+  <div class="form-wrapper">
     <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-      <label for="name">Your Name</label>
+      <label for="name">Name</label>
       <input type="text" id="name" name="name" required />
 
-      <label for="email">Your Email</label>
+      <label for="email">Email</label>
       <input type="email" id="email" name="_replyto" required />
 
-      <label for="company">Company Name</label>
+      <label for="company">Company</label>
       <input type="text" id="company" name="company" required />
 
-      <label for="message">Any Specific Requirements?</label>
-      <textarea id="message" name="message" rows="6"></textarea>
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" placeholder="Let us know your requirements..."></textarea>
 
       <button type="submit">Book Demo</button>
     </form>
