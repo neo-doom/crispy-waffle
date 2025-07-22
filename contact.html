@@ -5,62 +5,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact Us - ezincident</title>
   <style>
-    :root {
-      --primary-color: #0d47a1;
-      --secondary-color: #ffffff;
-      --accent-color: #42a5f5;
-      --bg-color: #f4f7fa;
-    }
-
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: var(--bg-color);
-      color: #333;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #667eea, #764ba2);
+      color: #ffffff;
     }
 
-    nav {
-      background-color: var(--primary-color);
-      padding: 1rem 2rem;
+    header {
+      background-color: #2c3e50;
+      padding: 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
 
-    nav .logo {
-      font-size: 1.5rem;
+    .logo {
+      font-size: 28px;
       font-weight: bold;
-      color: var(--secondary-color);
+      color: #3498db;
     }
 
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 1.5rem;
-    }
-
-    nav ul li a {
-      color: var(--secondary-color);
+    nav a {
+      color: white;
+      margin: 0 15px;
       text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav ul li a:hover {
-      color: var(--accent-color);
+      font-weight: 500;
     }
 
     .container {
       max-width: 800px;
-      margin: 3rem auto;
-      padding: 2rem;
-      background-color: #fff;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      margin: 80px auto;
+      background-color: rgba(255, 255, 255, 0.05);
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     }
 
-    h2 {
-      color: var(--primary-color);
-      margin-bottom: 1rem;
+    h1 {
+      text-align: center;
+      color: #ffffff;
+      margin-bottom: 20px;
     }
 
     form {
@@ -69,55 +54,52 @@
     }
 
     input, textarea {
-      padding: 0.75rem;
-      margin-bottom: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 1rem;
+      margin-bottom: 20px;
+      padding: 15px;
+      border-radius: 6px;
+      border: none;
+      font-size: 16px;
     }
 
     button {
-      background-color: var(--primary-color);
+      background-color: #f44336;
       color: white;
-      padding: 0.75rem;
+      padding: 15px;
+      font-size: 16px;
       border: none;
-      border-radius: 4px;
-      font-size: 1rem;
+      border-radius: 6px;
       cursor: pointer;
+      transition: background 0.3s ease;
     }
 
     button:hover {
-      background-color: var(--accent-color);
+      background-color: #e53935;
     }
 
     footer {
       text-align: center;
-      padding: 1rem 0;
-      background-color: var(--primary-color);
-      color: var(--secondary-color);
-      position: relative;
-      bottom: 0;
-      margin-top: 3rem;
+      padding: 20px;
+      color: #ffffff;
     }
   </style>
 </head>
 <body>
-
-  <nav>
+  <header>
     <div class="logo">ezincident</div>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="schedule-demo.html">Schedule Demo</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="features.html">Features</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
   <div class="container">
-    <h2>Contact Us</h2>
+    <h1>Contact Us</h1>
     <form>
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea rows="5" name="message" placeholder="Your Message" required></textarea>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="6" placeholder="Your Message" required></textarea>
       <button type="submit">Send Message</button>
     </form>
   </div>
@@ -125,6 +107,5 @@
   <footer>
     &copy; 2025 ezincident. All rights reserved.
   </footer>
-
 </body>
 </html>
