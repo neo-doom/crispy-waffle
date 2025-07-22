@@ -3,98 +3,113 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Schedule a Demo - ezincident</title>
-  <link rel="stylesheet" href="styles.css"/>
+  <title>Schedule a Demo – ezIncident</title>
+  <link rel="stylesheet" href="style.css" />
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
       margin: 0;
-      background-color: #ffffff;
-      color: #1b1f3b;
     }
+
     header {
-      background-color: #0e132e;
-      color: #ffffff;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      background-color: #00c1a4;
+      color: white;
+      padding: 20px;
+      text-align: center;
     }
+
     h1 {
-      margin: 0;
-      font-size: 2rem;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
     }
+
+    p.subheading {
+      font-size: 1.2rem;
+      color: #e3f9f6;
+    }
+
     .container {
       max-width: 600px;
-      margin: 3rem auto;
-      padding: 2rem;
-      background: #f4f6fa;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.05);
     }
+
     label {
       display: block;
-      margin: 1rem 0 0.3rem;
-      font-weight: 600;
+      margin-top: 15px;
+      font-weight: bold;
     }
-    input, textarea {
+
+    input, textarea, select {
       width: 100%;
-      padding: 0.75rem;
+      padding: 12px;
+      margin-top: 5px;
       border: 1px solid #ccc;
       border-radius: 6px;
       font-size: 1rem;
     }
+
     button {
-      margin-top: 1.5rem;
+      margin-top: 20px;
       background-color: #00c1a4;
       color: white;
-      padding: 0.75rem 1.5rem;
-      font-size: 1rem;
+      padding: 14px 28px;
+      font-size: 1.1rem;
       border: none;
       border-radius: 6px;
       cursor: pointer;
+      transition: background-color 0.3s ease;
     }
+
     button:hover {
       background-color: #009e88;
     }
-    .footer {
+
+    footer {
       text-align: center;
-      font-size: 0.85rem;
-      padding: 2rem;
-      background: #f9f9f9;
+      padding: 20px;
+      background: #f0f0f0;
+      font-size: 0.9rem;
       color: #777;
     }
   </style>
 </head>
 <body>
+
   <header>
-    <h1>ezincident</h1>
-    <a href="index.html" style="color: white; text-decoration: none;">Home</a>
+    <h1>Schedule a Demo</h1>
+    <p class="subheading">Discover how ezIncident can streamline your incident response</p>
   </header>
 
   <div class="container">
-    <h2>Schedule a Demo</h2>
-    <p>We're currently in early access. Submit your info to join the waitlist and be the first to see ezincident in action.</p>
-    <form name="demoRequest" method="POST" data-netlify="true">
-      <input type="hidden" name="form-name" value="demoRequest" />
+    <form action="mailto:demo@ezincident.com" method="post" enctype="text/plain">
       <label for="name">Full Name</label>
-      <input type="text" id="name" name="name" required />
+      <input type="text" id="name" name="name" required>
 
       <label for="email">Work Email</label>
-      <input type="email" id="email" name="email" required />
+      <input type="email" id="email" name="email" required>
 
       <label for="company">Company Name</label>
-      <input type="text" id="company" name="company" />
+      <input type="text" id="company" name="company" required>
 
-      <label for="message">Message / Use Case (Optional)</label>
+      <label for="role">Your Role</label>
+      <input type="text" id="role" name="role">
+
+      <label for="message">Any Specific Requirements?</label>
       <textarea id="message" name="message" rows="4"></textarea>
 
-      <button type="submit">Join Waitlist</button>
+      <button type="submit">Request Demo</button>
     </form>
   </div>
 
-  <div class="footer">
-    &copy; 2025 ezincident. All rights reserved.
-  </div>
+  <footer>
+    &copy; 2025 ezIncident. All rights reserved.
+  </footer>
+
 </body>
 </html>
